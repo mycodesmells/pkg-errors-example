@@ -36,6 +36,7 @@ func printStack(err error) {
 		for i, f := range err.StackTrace() {
 			fmt.Printf("%+s:%d", f, i)
 		}
+		fmt.Printf("Stack: %+v", err.StackTrace())
 	} else {
 		fmt.Println("No stack trace...")
 	}
